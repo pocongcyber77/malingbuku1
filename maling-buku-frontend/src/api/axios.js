@@ -1,10 +1,10 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://localhost:3000/api', // Ganti jika backend di server lain
+  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:3000/api',
   headers: {
-    'Content-Type': 'application/json',
-  },
+    'Content-Type': 'application/json'
+  }
 });
 
 // Add a request interceptor

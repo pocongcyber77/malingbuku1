@@ -6,7 +6,12 @@ import path from 'path'
 export default defineConfig({
   plugins: [react()],
   root: path.resolve(__dirname),
-  base: '/',
+  base: './',
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+    sourcemap: true
+  },
   server: {
     port: 5173,
     proxy: {
